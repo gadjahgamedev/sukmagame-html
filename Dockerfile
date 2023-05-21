@@ -8,4 +8,4 @@ RUN yarn install
 
 COPY . /usr/src/app
 
-CMD yarn prod
+CMD yarn dev
