@@ -1,6 +1,6 @@
 const config = {
   tailwindjs: "./tailwind.config.js",
-  port: 9050,
+  port: 3000,
   purgecss: {
     content: ["src/**/*.{html,js,php}"],
     safelist: {
@@ -19,6 +19,8 @@ const plugins = {
   typography: true,
   forms: true,
   containerQueries: true,
+  color: true,
+  aspectRatio: true,
 };
 
 // base folder paths

@@ -4,6 +4,8 @@ const allPlugins = {
   typography: require("@tailwindcss/typography"),
   forms: require("@tailwindcss/forms"),
   containerQueries: require("@tailwindcss/container-queries"),
+  color: require('tailwindcss/colors'),
+  aspectRatio: require('@tailwindcss/aspect-ratio'),
 };
 
 const plugins = Object.keys(allPlugins)
