@@ -23,5 +23,4 @@ services:
 
 networks:
   office-network:
-    external: true
     name: office-network
