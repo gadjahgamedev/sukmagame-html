@@ -6,6 +6,7 @@ const allPlugins = {
   containerQueries: require("@tailwindcss/container-queries"),
   color: require('tailwindcss/colors'),
   aspectRatio: require('@tailwindcss/aspect-ratio'),
+  defaultTheme: require('tailwindcss/defaultTheme'),
 };
 
 const plugins = Object.keys(allPlugins)
@@ -21,7 +22,11 @@ module.exports = {
   content: ["./src/**/*.{html,js,php}"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', 'sans'],
+      },
+    },
   },
   plugins: plugins,
 };
