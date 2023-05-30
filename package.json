@@ -31,9 +31,10 @@
     "tailwindcss": "^3.3.0"
   },
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp prod",
-    "prod": "gulp prod"
+    "dev": "gulp --development",
+    "build": "gulp build --production",
+    "prod": "gulp prod",
+    "clean": "gulp clean"
   },
   "repository": {
     "type": "git",
