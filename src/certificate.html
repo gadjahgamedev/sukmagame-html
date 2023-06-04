@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sertifikat | Sukmagame - Asah Kemampuan Matematikamu!</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  </head>
+  <body class="bg-white">
+
+    <div class="bg-white">
+
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="center"> <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <div style="font-size:30pt">
+                        Nama Materi - $courseSession.getCourse().getCode()
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    Successfully completed by <br/>
+                    <div style="font-size:30pt">
+                        ${student.firstName} ${student.lastName}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    #if ($gradingScheme.getDisplayType().name() == "LETTER")
+                        Grade: $grade.getGrade()
+                    #elseif ($gradingScheme.getDisplayType().name() == "PERCEN")
+                        Score: $Utility.format($grade.getPoints(), 0, 2)%
+                    #elseif ($gradingScheme.getDisplayType() == "POINT")
+                        Score: $Utility.format($grade.getPoints(), 0, 2) / $Utility.format($gradingScheme.getMaxScore(), 0, 2)
+                    #end
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div style="font-size:20pt">
+                        <i>$DateFormatter.getFormattedDate($grade.getAwardDate(), "dd MMM yyyy")</i>
+                    </div>
+                </td>
+            </tr>
+        <tbody>
+    </table>
+
+    </div>
+
+</body>
+</html>
