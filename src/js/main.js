@@ -41,3 +41,7 @@ function sidebar() {
       },
   }
 }
+
+function modal() {
+
+}

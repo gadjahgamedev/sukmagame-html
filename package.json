@@ -3,7 +3,6 @@
   "version": "2.2.0",
   "description": "TailwindCSS StarterKit with Gulp 4",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.0",
