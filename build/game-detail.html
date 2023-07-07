@@ -7,6 +7,7 @@
     <title>Larian Hero | Sukmagame - Asah Kemampuan Matematikamu!</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="bg-gray-50">
 
@@ -52,6 +53,25 @@
           <div class="lg:col-span-4 lg:row-end-1">
             <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
               <img src="https://www.sukmagame.id/gameImg/game1.jpg" alt="Permainan Larian Hero Sukmagame" class="object-cover object-center">
+            </div>
+          </div>
+          <div class="lg:col-span-4 rounded-md bg-orange-50 p-4">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <!-- Heroicon name: mini/information-circle -->
+                <svg class="h-5 w-5 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-3 flex-1 md:flex md:justify-between">
+                <p class="text-sm text-orange-700">Merasa menyenangkan bermain permainan ini? Cari tahu lebih banyak di Sukma Belajar!</p>
+                <p class="mt-3 text-sm md:mt-0 md:ml-6">
+                  <a href="https://sukmabelajar.com/register" class="whitespace-nowrap font-medium text-orange-700 hover:text-orange-600">
+                    Daftar sekarang!
+                    <span aria-hidden="true"> &rarr;</span>
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -242,6 +262,42 @@
         </div>
       </div>
     </footer>
+
+    <div
+      x-data="{ 'showModal': false }"
+      @keydown.escape="showModal = false"
+    >
+        
+
+        <!-- Modal -->
+        <div
+            class="fixed inset-0 z-30 flex items-center justify-center overflow-auto bg-black bg-opacity-50"
+            x-show="showModal"
+        >
+            <!-- Modal inner -->
+            <div
+                class="max-w-3xl px-6 py-4 mx-auto text-left bg-white rounded shadow-lg"
+                @click.away="showModal = false"
+                x-transition:enter="motion-safe:ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+            >
+                <!-- Title / Close-->
+                <div class="flex items-center justify-between">
+                    <h5 class="mr-3 text-black max-w-none">Mohon tunggu...</h5>
+
+                    <button type="button" class="z-50 cursor-pointer" @click="showModal = false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- content -->
+                <div>Permainan sedang diproses...</div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/scripts.js"></script>
 
